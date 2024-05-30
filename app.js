@@ -10,6 +10,8 @@ let timer;
 
 let stop="stop"
 
+let S_btn = document.getElementById('s_btn')
+
 function start(){
     timer = setInterval(()=>{
         milisecond++
@@ -31,6 +33,7 @@ function start(){
 
 
     },10)
+    S_btn.disabled = true
 }
 
 function startstop(){
@@ -44,9 +47,13 @@ document.getElementById("startstop").innerText = "stop";
         start()
         document.getElementById("startstop").innerText= "start";
     }
-
+    S_btn.disabled = !true
 }
 
 function reset(){
     location.reload();
+
+  
+
+
 }
